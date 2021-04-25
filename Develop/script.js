@@ -23,25 +23,27 @@ console.log('LLLLLLLLLL')
 //
 
 //Testing button
-var formText = $('#testBtn')
-var savetextcontent = $('testBtn')
+// var formText = $('#testBtn')
+// var savetextcontent = $('testBtn')
 
-console.log("********")
-console.log(savetextcontent)
-console.log("********")
-//console.log(savetextcontent)
-//
+// console.log("********")
+// console.log(savetextcontent)
+// console.log("********")
+// //console.log(savetextcontent)
+// //
 
-//console.log(formEl)
-//console.log(formValue)
-//savetextcontent.on('click', saveInput)
-$('.saveBtn').on('click', saveInput)
+// //console.log(formEl)
+// //console.log(formValue)
+// //savetextcontent.on('click', saveInput)
+// $('.saveBtn').on('click', saveInput)
 
-function saveInput(){
-    console.log("Check Button")
-    console.log(formText.val)
-    localStorage.setItem("Item", formText.val)
-}
+// function saveInput(){
+//     console.log("Check Button")
+//     console.log(formText.val)
+//     localStorage.setItem("Item", formText.val)
+// }
+
+
 
 setInterval(function() {
     var currentTime =moment();
@@ -147,4 +149,14 @@ setInterval(function() {
         // console.log("Present", Present)
         // console.log("##", Past === future, Past === Present)
 }
-Background()
+Background();
+
+// $(document).ready(function () {
+//     // saveBtn click listener 
+//     $(".saveButton").on("click", function () {
+//         // Get nearby values of the description in JQuery
+//         var text = $(this).siblings(".description").val();
+//         var time = $(this).parent().attr("id");
+//         // Save text in local storage
+//         localStorage.setItem(time, text);
+//     })}
