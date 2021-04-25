@@ -23,27 +23,31 @@ console.log('LLLLLLLLLL')
 //
 
 //Testing button
-// var formText = $('#testBtn')
-// var savetextcontent = $('testBtn')
+//  var formText = $('#testingform')
 
-// console.log("********")
-// console.log(savetextcontent)
-// console.log("********")
-// //console.log(savetextcontent)
-// //
 
-// //console.log(formEl)
-// //console.log(formValue)
-// //savetextcontent.on('click', saveInput)
-// $('.saveBtn').on('click', saveInput)
 
-// function saveInput(){
-//     console.log("Check Button")
+
+
+//  $('.saveBtn').on('click', saveInput)
+
+//  function saveInput(){
+//      console.log("Check Button")
 //     console.log(formText.val)
 //     localStorage.setItem("Item", formText.val)
-// }
+//  }
 
+//Handles saving the contect of each row to the local storage
 
+$(document).ready(function () {
+
+    $(".saveBtn").on("click", function () {
+        var itemKey = $(this).parent().attr("id")
+        var itemValue = $(this).siblings(".content").val();
+        localStorage.setItem(itemKey, itemValue);
+
+       
+    })})
 
 setInterval(function() {
     var currentTime =moment();
@@ -53,57 +57,7 @@ setInterval(function() {
  }, 1000)
 
 
- //console.log(scheduleTime.data.number)
-//working for loop 
-//   function addPast (){
-//       if (scheduleTime[1].data.number > rightNow){
-//     // for (i = 0; i < classHandler.length; i++) {
-//         $(classHandler).each(function(){
-//         //  $(this).classList.add('past')
-//         console.log(this)
-//         });
-//     //   }
-//       console.log("math doesn't")
-//     }
-//     else if (scheduleTime = rightNow ){
-//         for (i = 0; i < classHandler.length; i++)
-//             classHandler[i].classList.add('present')
-//     }
-// }
-//     else  {
-//         for (i = 0; i < classHandler.length; i++) {
-//             classHandler[i].classList.add('future')
-//     }
-//   }
-
-  //addPast();
-
-  //classHandler.forEach(ChangeClasses(dataset))
-
-// function ChangeClasses(data){
-//     classHandler[3].classList.add('future')
-
-//     }
-
-// ChangeClasses();
-
-// function timeCheck(){
-//  if (scheduleTime < rightNow){
-//     addPast();
-   
-//  }
-//  else if (scheduleTime === rightNow){
-//      console.log()
-//  }
-// }
-
-
-
-
-  
-//timeCheck();
-  
-
+ 
 
 //Call current
 //Use JQuery to get div
@@ -122,41 +76,36 @@ setInterval(function() {
 
 
 
- //console.log(currentTime)
+ //handles assigning the past,present,future classes dynamically based on whether the current time value is greater or lesser than the dataset index 
 
  function Background() {
     $(scheduleTime).each(function() {
-            console.log("!!", this.dataset.number, rightNow)
-            // console.log("KK", this.dataset)
             console.log(this)
             if (this.dataset.number < rightNow) {
                 $(this).addClass('past')
-                $(this).removeClass('future')
-                $(this).removeClass('present')
+               
             } else if (this.dataset.number > rightNow) {
                 $(this).addClass('future')
-                $(this).removeClass('present')
-                $(this).removeClass('past')
+                
             } else if (this.dataset.number === rightNow) {
                 $(this).addClass('present')
-                $(this).removeClass('past')
-                $(this).removeClass('future')
+               
             }
             // console.log(this.dataset.number)
         })
-        // console.log("Past", Past)
-        // console.log("future", future)
-        // console.log("Present", Present)
-        // console.log("##", Past === future, Past === Present)
+        
 }
 Background();
 
-// $(document).ready(function () {
-//     // saveBtn click listener 
-//     $(".saveButton").on("click", function () {
-//         // Get nearby values of the description in JQuery
-//         var text = $(this).siblings(".description").val();
-//         var time = $(this).parent().attr("id");
-//         // Save text in local storage
-//         localStorage.setItem(time, text);
-//     })}
+$("#8 .content").val(localStorage.getItem("8"));
+$("#9 .content").val(localStorage.getItem("9"));
+$("#10 .content").val(localStorage.getItem("10"));
+$("#11 .content").val(localStorage.getItem("11"));
+$("#12 .content").val(localStorage.getItem("12"));
+$("#13 .content").val(localStorage.getItem("13"));
+$("#14 .content").val(localStorage.getItem("14"));
+$("#15 .content").val(localStorage.getItem("15"));
+$("#16 .content").val(localStorage.getItem("16"));
+$("#17 .content").val(localStorage.getItem("17"));
+$("#18 .content").val(localStorage.getItem("18"));
+

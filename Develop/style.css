@@ -3,7 +3,7 @@ body {
   font-size: 16px;
   line-height: 1;
   margin: 5%;
-  background-color: rgb(230, 230, 230);
+  background-color: darkblue;
 }
 
 textarea {
@@ -45,17 +45,17 @@ textarea {
 }
 
 .past {
-  background-color: #a0a0a0;
+  background-color: #d3d3d3;
   color: white;
 }
 
 .present {
-  background-color: #db856b;
+  background-color: #ff6961;
   color: white;
 }
 
 .future {
-  background-color: #308d23;
+  background-color: #021802;
   color: white;
 }
 
@@ -73,7 +73,7 @@ textarea {
 }
 
 .greenback {
-  background-color: rgb(202, 199, 199);
+  background-color: rgb(131, 131, 131);
 }
 
 .blueback {
