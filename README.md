@@ -4,6 +4,10 @@
  
 
 ## Screenshot
+![screenshot](./assets/images/dayplannerscreenshot.JPG)
 
+## Link to deployed app
+
+[Link to deployed webpage](https://michaelzadra27.github.io/DayPlanner/)
 
 ## Credits
